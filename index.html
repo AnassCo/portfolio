@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<title>Anass.com</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="main.css">
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="Topmenu">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="Topmenu">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="Topmenu">SERVICES</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="Topmenu">CONTACT</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    </div>
+  </header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container --><div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">About Me</span0></h5>
+    <br><pre>My name is Anass. <img id="mac" src="Mac.png">
+
+   I'm a 25 year old computer enthusiast.
+
+       I'm currently studying Webdevelopment in Düsseldorf, Germany, and this is my first website.</pre>
+    
+    <br><br><br> <br><br><br> <br><br><br>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHAT I DO FOR YOU</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Design</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Marketing</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>E-Commerce</h5>
+      <p class="w3-text-grey">A perfect store with beautiful design across all devices</p><br>
+    
+      <h5>Website Design</h5>
+      <p class="w3-text-grey">A new website or a re-design will be your lead-machine.</p><br>
+    
+      <h5>Logo</h5>
+      <p class="w3-text-grey">It is more than an icon. It's your DNA.</p><br>
+    
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Corporate Design</h5>
+      <p class="w3-text-grey">Visualize your core value with typical style and color. </p><br>
+    
+      <h5>Branding</h5>
+      <p class="w3-text-grey">Message that reaches peoples and let you stand out from the crowd.</p><br>
+    
+      <h5>Social Media Managment</h5>
+      <p class="w3-text-grey">Be close to your customer.</p><br>
+    
+      
+      
+    
+</div>
+<br><br><br>
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">LETS'S TALK</span></h5>
+
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message " required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>copyright Anass.com | 2020</p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
